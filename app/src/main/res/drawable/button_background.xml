@@ -3,16 +3,24 @@
     <item android:state_enabled="true">
         <shape>
             <solid android:color="@color/colorPrimary"/>
+            <corners android:radius="5dp"></corners>
         </shape>
+
     </item>
     <item android:state_enabled="false">
         <shape>
             <solid android:color="@color/colorPrimaryDark"/>
+            <corners android:radius="5dp"></corners>
+
         </shape>
+
     </item>
     <item android:state_pressed="true">
         <shape>
             <solid android:color="@color/ColorAccent"/>
+            <corners android:radius="5dp"></corners>
+
         </shape>
     </item>
+
 </selector>
