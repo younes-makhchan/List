@@ -2,17 +2,17 @@
 
     <item android:state_enabled="true">
         <shape>
-            <solid android:color="#f00"/>
+            <solid android:color="@color/colorPrimary"/>
         </shape>
     </item>
     <item android:state_enabled="false">
         <shape>
-            <solid android:color="#0f0"/>
+            <solid android:color="@color/colorPrimaryDark"/>
         </shape>
     </item>
     <item android:state_pressed="true">
         <shape>
-            <solid android:color="#00f"/>
+            <solid android:color="@color/ColorAccent"/>
         </shape>
     </item>
 </selector>
