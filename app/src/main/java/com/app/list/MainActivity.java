@@ -10,6 +10,9 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.app.list.adapters.MyAdapter;
+import com.app.list.models.MyModel;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -26,15 +29,16 @@ public class MainActivity extends AppCompatActivity {
         EditText textViewEmail=findViewById(R.id.editTextEmail);
         ListView listView=findViewById(R.id.listView);
 
-        List<String> emails =new ArrayList<String>();
-        ArrayAdapter adaper=new ArrayAdapter<>(this, android.R.layout.simple_list_item_1,emails);
-        listView.setAdapter(adaper);
+        List<MyModel> myModels =new ArrayList<MyModel>();
+        ArrayAdapter adapter=new MyAdapter(this, android.R.layout.simple_list_item_1,myModels);
+        listView.setAdapter(adapter);
         
         buttonAdd.setOnClickListener(view -> {
-            String name=textViewName.getText().toString();
-            String email=textViewEmail.getText().toString();
-            emails.add("name:"+name+"\n"+"Email:"+email);
-            adaper.notifyDataSetChanged();
+            String title =textViewName.getText().toString();
+            String content =textViewEmail.getText().toString();
+            MyModel myModel =new MyModel(title,content);
+            adapter.add(myModel);
+            adapter.notifyDataSetChanged();
 
         });
 
