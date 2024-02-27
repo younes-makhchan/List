@@ -31,8 +31,6 @@ public class MainActivity extends AppCompatActivity {
         listView.setAdapter(adaper);
         
         buttonAdd.setOnClickListener(view -> {
-            Log.d("onCreate", "onCreate: lunch ");
-            Toast.makeText(this, "toasting", Toast.LENGTH_SHORT).show();
             String name=textViewName.getText().toString();
             String email=textViewEmail.getText().toString();
             emails.add("name:"+name+"\n"+"Email:"+email);
